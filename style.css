@@ -1,35 +1,38 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Alan Sans", sans-serif;
     background-color: #FEF3E2;
 }
-.nav{
+
+.nav {
     width: 100%;
-    background-color:#FA812F;
+    background-color: #FA812F;
     padding: 20px;
 }
 
-.container{
-
+.container {
+  
     padding: 10px;
-   
+
 
 }
 
-.book_container{
+.book_container {
+    display: inline-block;
     padding: 30px;
     padding-left: 25px;
     border-radius: 10px;
     width: 25%;
-    background-color:#FA812F;
-  
+    background-color: #FA812F;
+
 }
 
-.book_container > button{
+.book_container>button {
     border-style: none;
     background-color: rgb(41, 41, 41);
     color: white;
@@ -38,7 +41,7 @@ body{
     margin-top: 20px;
 }
 
-#add_new{
+#add_new {
     background-color: black;
     color: white;
     border-style: none;
@@ -51,22 +54,82 @@ body{
     position: fixed;
     bottom: 20px;
     right: 30px;
-    
+
 }
 
-#add_new:hover{
+#add_new:hover {
     cursor: pointer;
 }
 
-.popup{
-  height: 100vh;
+.popup {
+    height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-    z-index: 1; /* Ensure it's on top of everything */
-    position: fixed; /* Fixed to the viewport */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    position: absolute;
     top: 0;
     left: 0;
-    
+    display: none;
 }
 
-   
+#popup_box{
+    display: none;
+    border: black solid 5px;
+    left: 25%;
+    background-color: #FA812F;
+    position: absolute;
+    z-index: 3;
+    width: 50%;
+    height: 30%;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#input_text{
+    resize: none;
+    left: 50%;
+    display: inline;
+    font-size: larger;
+    padding: 12px;
+    height: 150px;
+    width: 600px;
+    border-radius: 8px;
+}
+
+.popup_box > textarea:focus{
+  outline: none;
+  overflow-wrap:normal;
+}
+/* selecting add and cancel button */
+
+#popup_box > button{
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.popup_buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    justify-content: center; 
+}
+
+.popup_buttons button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border: 2px solid #FA812F; /* Optional: add your own border */
+    box-shadow: none; /* Remove any glow */
+}
